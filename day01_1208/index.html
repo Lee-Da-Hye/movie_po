@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+</head>
+
+<body>
+    <!-- https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do -->
+    <header>
+        
+    </header>
+    <nav class="navigation">
+        <div class="ham-btn">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul class="lnb">
+            <li><a href="#"><span>HOME</span></a></li>
+            <li><a href="#"><span>ABOUT</span></a></li>
+            <li><a href="#"><span>SHOW MOVIE</span></a></li>
+            <li><a href="#"><span>REVERVATION</span></a></li>
+        </ul>
+    </nav>
+    <div class="input-container">
+        <div class="input-box">
+            <i class='bx bx-search-alt'></i>
+            <!-- <i class='bx bx-x-circle'></i> -->
+            <input type="text" id="userInput" placeholder="검색어를 입력하세요">
+        </div>
+    </div>
+    <div class="category-container">
+        <div class="select-container">
+            <div class="select-box">
+                <div class="options-container">
+                    <div class="option">
+                        <input type="radio" class="radio" id="AllCategroy" name="category">
+                        <label for="AllCategroy">모두보기</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Mystery" name="category">
+                        <label for="Mystery">Mystery</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Mystery" name="category">
+                        <label for="Mystery">Mystery</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Mystery" name="category">
+                        <label for="Mystery">Mystery</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Mystery" name="category">
+                        <label for="Mystery">Mystery</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Thriller" name="category">
+                        <label for="Thriller">Thriller</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Biography" name="category">
+                        <label for="Biography">Biography</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="Drama" name="category">
+                        <label for="Drama">Drama</label>
+                    </div>
+                </div>
+            </div>
+            <div class="selected">
+                영화 장르를 선택하세요.
+            </div>
+        </div>
+        <div class="genre-container">
+            <button>모두보기</button>
+            <button>Mystery</button>
+            <button>Thriller</button>
+            <button>Biography</button>
+            <button>Documentary</button>
+            <button>Drama</button>
+            <button>Sci-Fi</button>
+            <button>Horror</button>
+            <button>Action</button>
+            <button>Family</button>
+            <button>Romance</button>
+            <button>Sport</button>
+        </div>
+    </div>
+
+    <h2>추천 영화 목록</h2>
+    <div class="slide-container">
+        
+    </div>
+
+    <h2>영화 목록</h2>
+    <div class="movies-container">
+        <div class="movies-contents">
+            <!-- <div class="movie-box">
+                <div class="movie-img">
+                    <img src="http://placekitten.com/400/300" alt="">
+                </div>
+                <div class="movie-details">
+                    <h3>TITLE</h3>
+                    <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure numquam quibusdam consequuntur voluptates voluptatibus, hic temporibus fuga ut qui! Doloremque illum libero sequi suscipit odit, nostrum ut ipsa saepe nam?</div>
+                    <ul class="genres">
+                        <li>필요한 개수만큼 생성</li>
+                    </ul>
+                    <div class="newYear">개봉일정</div>
+                    <div class="rating">별점처리</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+   <script src="./script/common.js"></script>
+</body>
+
+</html>

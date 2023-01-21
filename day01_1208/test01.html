@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .input-container {
+            width: 1440px;
+            margin: auto;
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .input-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: plum;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: 0.4s ease-in-out;
+        }
+
+        .input-box>input {
+            opacity: 0;
+            width: 0;
+        }
+
+        .input-box>input::placeholder {
+            text-indent: 8px;
+        }
+
+        .input-box.active {
+            width: 300px;
+            justify-content: space-evenly;
+        }
+
+        .input-box.active>input {
+            opacity: 1;
+            width: 80%;
+            height: 30px;
+            background-color: rgb(247, 234, 247);
+            border: 1px solid plum;
+            transition-delay: 0.2s;
+        }
+
+        .movies-container {}
+
+        .movies-contents {
+            width: 1440px;
+            margin: auto;
+            display: grid;
+            /* grid-template-columns: repeat(4, 1fr);  */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .movies-box {
+            width: calc((100% - 90px) / 4);
+            height: 500px;
+            background-color: orange;
+
+        }
+
+        .movies-box {}
+
+        .movie-img {
+            height: 500px;
+            overflow: hidden;
+            /* 높이는 반응형 사이즈에 따라 일일히 조정할 필요 있음 */
+        }
+
+        .movie-img>img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1490px) {
+            .movies-contents {
+                width: 98%;
+            }
+        }
+
+        /* @media screen and (max-width: 970px){
+            .movies-contents{  
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+        @media screen and (max-width: 670px){
+            .movies-contents{  
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        } */
+    </style>
+    <style>
+        header {
+            width: 1440px;
+            margin: auto;
+            height: 300px;
+        }
+
+        .genre-container {
+            width: 800px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .genre-container button {
+            padding: 15px 10px;
+            width: 120px;
+        }
+
+        .navigation {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 99;
+            clip-path: circle(25px at calc(100% - 45px) 45px);
+            transition: .3s ease-in-out;
+        }
+
+        .navigation.active {
+            clip-path: circle(75%);
+        }
+
+        .navigation .ham-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .navigation .ham-btn span {
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            height: 3px;
+            transform: translate(-50%, -50%);
+            background-color: white;
+        }
+
+        .navigation .ham-btn span:nth-child(1) {
+            top: 30%;
+        }
+
+        .navigation .ham-btn span:nth-child(2) {
+            top: 50%;
+        }
+
+        .navigation .ham-btn span:nth-child(3) {
+            top: 70%;
+        }
+
+        .navigation.active .ham-btn span:nth-child(1) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .navigation.active .ham-btn span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navigation.active .ham-btn span:nth-child(3) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do -->
+    <header>
+        <nav class="navigation">
+            <div class="ham-btn">
+                <span></span><span></span><span></span>
+            </div>
+
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SHOW MOVIE</a></li>
+                <li><a href="#">REVERVATION</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="input-container">
+        <div class="input-box">
+            <i class='bx bx-search-alt'></i>
+            <!-- <i class='bx bx-x-circle'></i> -->
+            <input type="text" id="userInput" placeholder="검색어를 입력하세요">
+        </div>
+    </div>
+    <div class="genre-container">
+        <button>Drama</button>
+        <button>Mystery</button>
+        <button>Thriller</button>
+        <button>Biography</button>
+        <button>Documentary</button>
+        <button>Drama</button>
+        <button>Sci-Fi</button>
+        <button>Horror</button>
+        <button>Action</button>
+        <button>Family</button>
+        <button>Romance</button>
+        <button>Sport</button>
+    </div>
+    <div class="movies-container">
+        <div class="movies-contents">
+            <!-- <div class="movie-box">
+                <div class="movie-img">
+                    <img src="http://placekitten.com/400/300" alt="">
+                </div>
+                <div class="movie-details">
+                    <h3>TITLE</h3>
+                    <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure numquam quibusdam consequuntur voluptates voluptatibus, hic temporibus fuga ut qui! Doloremque illum libero sequi suscipit odit, nostrum ut ipsa saepe nam?</div>
+                    <ul class="genres">
+                        <li>필요한 개수만큼 생성</li>
+                    </ul>
+                    <div class="newYear">개봉일정</div>
+                    <div class="rating">별점처리</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        const moviesContents = document.querySelector('.movies-contents');
+        const userInput = document.querySelector('#userInput');
+        const bx = document.querySelector('.bx');
+
+        let allMovies = [];
+        const URL = 'https://yts.mx/api/v2/list_movies.json';
+
+        loadData(URL);
+
+        function loadData(URL) {
+            fetch(URL).then(data => data.json())
+                .then(data => {
+                    allMovies = data.data.movies.map(movie => movie);
+                    movieList(allMovies);
+                })
+        }
+
+        userInput.addEventListener('keyup', (event) => {
+            console.log(event.target.value);
+            let searchText = event.target.value.toUpperCase();
+
+            if (searchText) {
+                const h3s = document.querySelectorAll('h3');
+                for (h3 of h3s) {
+                    let h3Text = h3.innerHTML.toUpperCase();
+                    if (!h3Text.includes(searchText)) {
+                        h3.parentElement.parentElement.style.display = 'none';
+                    } else {
+                        h3.parentElement.parentElement.style.display = '';
+                    }
+                }
+                bx.classList.remove('bx-search-alt');
+                bx.classList.add('bx-x-circle');
+            } else {
+                moviesContents.innerHTML = '';
+                movieList(allMovies);
+            }
+
+        })
+
+        userInput.addEventListener('focus', (event) => {
+            inputBox.classList.add('active');
+        })
+        userInput.addEventListener('blur', () => {
+            inputBox.classList.remove('active');
+            bx.classList.add('bx-search-alt');
+            bx.classList.remove('bx-x-circle');
+            userInput.value = '';
+            // 추가
+            moviesContents.innerHTML = '';
+            movieList(allMovies);
+        })
+        // const inputContainer = document.querySelector('.input-container');
+        // inputContainer.addEventListener('mouseenter', () => {
+        //     inputContainer.classList.add('active');
+        // })
+        // inputContainer.addEventListener('mouseleave', () => {
+        //     inputContainer.classList.remove('active');
+        // })
+        bx.addEventListener('click', () => {
+            bx.classList.add('bx-search-alt');
+            bx.classList.remove('bx-x-circle');
+            userInput.value = '';
+
+            // // error
+            // if( bx.classList.contains('bx-search-alt')){
+            //     moviesContents.innerHTML ='';
+            //     movieList(allMovies);
+            // }
+            moviesContents.innerHTML = '';
+            movieList(allMovies);
+            //inputContainer.classList.remove('active');
+        })
+
+
+        function movieList(movies) {
+            console.log(movies);
+
+            for (movie of movies) {
+                createDom(movie);
+            }
+        }
+
+        function createDom(movie) {
+
+
+            const movieBox = document.createElement('div');
+            movieBox.classList.add('movie-box');
+
+            const movieImg = document.createElement('div');
+            movieImg.classList.add('movie-img');
+
+            const img = document.createElement('img');
+            img.setAttribute('src', movie.large_cover_image);
+            img.setAttribute('title', movie.summary);
+
+            movieImg.append(img);
+            movieBox.append(movieImg);
+
+            const movieDetails = document.createElement('div');
+            movieDetails.classList.add('movie-details');
+
+            const h3 = document.createElement('h3');
+            h3.innerHTML = movie.title;
+            movieDetails.append(h3); // 제목의 길이를 어떻게 조절할 것인가 
+            movieBox.append(movieDetails);
+
+            const ul = document.createElement('ul');
+            ul.classList.add('genres');
+
+            const genres = movie.genres;
+            for (genre of genres) {
+                const li = document.createElement('li');
+                li.innerHTML = genre;
+                ul.append(li);
+            }
+            movieBox.append(ul);
+
+            const rating = document.createElement('div');
+            rating.classList.add('rating');
+            rating.innerHTML = movie.rating;
+
+            movieBox.append(rating);
+            moviesContents.append(movieBox);
+        }
+    </script>
+    <script>
+
+        const inputBox = document.querySelector('.input-box');
+        inputBox.addEventListener('mouseenter', () => {
+            inputBox.classList.add('active');
+        })
+
+        // ham 맨위에 있고  navigation이 아래 있어서 클릭이벤트를 받지 못함 
+        const ham = document.querySelector('.ham-btn');
+        ham.addEventListener('click', showNavi)
+
+        function showNavi() {
+            document.querySelector('.navigation').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+
+.inner{
+    width: 100%;
+    position: relative;
+}
+.inner:before{
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(46, 67, 181, 0.083);
+    border-bottom: 1px solid #e4e9f2;
+}
+.info-box{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    position: relative;
+}
+/*.movie-img{
+    position: sticky;
+}*/
+.movie-img img{
+    width: 50%;
+}
+.info-top{
+    padding-top: 30px;
+    width: 50%;
+}
+
+.title{
+    font-size: 30px;
+}
+.year{
+    font-size: 24px;
+    font-weight: 700;
+}
+.genres,.rating,.like-count,.runtime{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.bxs-star{
+    color: rgb(224, 224, 4);
+}
+.bxs-heart{
+    color: rgb(215, 38, 38);
+}
+
+.reservation{
+    position: absolute;
+    left: 80%;
+    top: 30%;
+}
+.reservation a{
+    background-color: rgb(23, 16, 107);;
+    display: inline-block;
+    vertical-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+.info-bottom{
+    padding: 50px 300px;
+    padding-bottom: 0;
+}
+.desc{
+    width: 100%;
+    text-align: justify;
+}
+
+.goPrevPage{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.bx-left-arrow-circle:hover{
+    color: #ed8989
+}
+.bx-left-arrow-circle{
+    font-size: 45px;
+    color: rgb(23, 16, 107);
+}
+@media screen and (max-width: 1266px) {
+    .reservation a{
+        width: 230px;
+    }
+}
+@media screen and (max-width: 1165px) {
+    .reservation a{
+        width: 200px;
+    }
+    .title{
+        overflow:visible;
+        white-space: nowrap;
+        text-overflow: none;
+        height: 2em;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .movie-img img{
+        width: 100%;
+    }
+    .info-box{
+        flex-direction: column;
+    }
+    .reservation a{
+        width: 100%;
+    }
+    .reservation{
+        position: static;
+    }
+    .info-bottom{
+        padding: 50px 20px;
+        padding-bottom: 0;
+    }
+    .goPrevPage{
+        padding-top: 50px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <title> Login</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrap marginAuto">
+        <div class="logo">
+            <a href="/index"></a>
+        </div>
+        <nav class="navigation">
+            
+            <ul class="lnb">
+                <li><a href="#">예매</a></li>
+                <li><a href="/movie">영화</a></li>
+                <li><a href="#">영화관</a></li>
+                <li><a href="#">마이페이지</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <span><a href="/login">로그인</a></span>
+            <span><a href="#">회원가입</a></span>
+        </div>
+        <nav class="ham-navigation">
+            <div class="ham-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="ham-lnb">
+                <li><a href="#"><span>예매</span></a></li>
+                <li><a href="#"><span>영화</span></a></li>
+                <li><a href="#"><span>영화관</span></a></li>
+                <li><a href="#"><span>마이페이지</span></a></li>
+            </ul>
+
+            <div class="ham-login">
+                <span><a href="#">로그인</a></span>
+                <span><a href="#">회원가입</a></span>
+            </div>
+        </nav>
+        
+    </div>
+  </header>
+  
+  <section class="movie-login">
+      <div class="login-container maginAuto">
+        <div class="login-box">
+          <h1>Login</h1>
+          <div>
+            <label for="username"></label>
+            <input type="text" id="username" name="username" placeholder="아이디" autocomplete="off">
+          </div>
+          <div>
+            <label for="userpwd"></label>
+            <input type="password" id="userpwd" name="userpwd" placeholder="비밀번호">
+          </div>
+          <div class="ck">
+            <input type="checkbox" id="checkbox" checked>
+            <label for="checkbox">로그인 상태 유지</label>
+          </div>
+          <div>
+            <button class="loginbtn">로그인</button>
+          </div>
+          <div class="registerbtn">
+            <span><a href="#" class="no-line">회원가입 </a></span>
+            <span><a href="#">ID 찾기</a></span>
+            <span><a href="#">비밀번호 찾기</a></span>
+          </div>
+          <div class="line"></div>
+          <div class="platform-loginbtn">
+            <button class="facebook">Facebook 로그인</button>
+            <button class="google">Google 로그인</button>
+            <button class="naver">Naver 로그인</button>
+            <button class="apple">Apple 로그인</button>
+          </div>
+      </div>
+      </div>
+    
+  </section>
+  <footer>
+    <div class="footer-bottom marginAuto">
+        <h1>movie</h1>
+        <address>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+            <span>TEL : 02-0000-0000/</span>
+            <span>FAX : 02-0000-0000<br></span>
+        </address>
+        <div class="footer-copyright">
+            <p class="right">개인정보처리방침</p>
+            <p>Copyright © Lorem ipsum dolor All rights reserved</p>
+        </div>
+    </div>
+
+</footer>
+  <script src="/script/common.js"></script>
+  <script>
+    const loginbtn = document.querySelector('.loginbtn');
+    const username = document.querySelector('#username');
+    const userpwd = document.querySelector('#userpwd');
+
+    loginbtn.addEventListener('click', function () {
+      console.log(username.value, userpwd.value);
+      const user = { username: username.value, userpwd: userpwd.value }
+
+      // app.post('/login', (req, res)=>{ 
+      fetch('http://localhost:3000/login', {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json.success);
+          if (json.success) {
+            document.cookie = `login=ok`;
+            location.replace('http://localhost:3000/');
+            // js로 foward 함 
+            // location.href = data.url 
+          } else {
+            alert(json.message);
+          }
+        });
+    })
+  </script>
+</body>
+
+</html>

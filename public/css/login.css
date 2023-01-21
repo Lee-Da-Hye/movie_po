@@ -1,0 +1,106 @@
+.movie-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.login-box > h1{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 45px;
+    padding-top: 30px;
+    color: rgb(23, 16, 107);
+}
+#username, #userpwd{
+    width: 400px;
+    height: 40px;
+    padding-left: 14px;
+    border: 1px solid ;
+    border-radius: 5px;
+    
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    outline: 1px solid rgb(23, 16, 107);;
+}
+#userpwd{
+    margin-top: 5px;
+}
+.ck{
+    padding-top: 5px;
+    font-size: 15px;
+}
+.loginbtn{
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(23, 16, 107);
+    width: 400px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.registerbtn{
+    padding-top: 15px;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+    
+}
+.registerbtn span > a{
+    position: relative;
+    display: inline-block;
+    padding-left: 28px;
+}
+.registerbtn span:nth-of-type(2) > a::before , .registerbtn span:nth-of-type(3) > a::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    width: 1px;
+    height: 12px;
+    border-radius: 0.5px;
+    background-color: #dadada;
+   
+
+  }
+.line::before{
+    content: '';
+    display: inline-block;
+    width: 400px;
+    border-bottom: 1px solid #222;
+}
+
+.platform-loginbtn>button{
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+.facebook{
+    background-color: #3b5998;
+    color: #fff;
+    border-color: #3b5998;
+}
+.naver{
+    background-color: #2db400;
+    color: #fff;
+    border-color: #2db400;
+}
+.google{
+    background-color: #ffff;
+    border-color: gray;
+}
+.apple{
+    background-color: #000;
+    color: #fff;
+}
