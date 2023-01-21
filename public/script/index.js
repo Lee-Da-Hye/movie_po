@@ -1,3 +1,13 @@
+const lists = async ()=>{
+    try{
+        const response = await fetch('http://localhost:3000');
+        const users = await response.json();
+        console.log(users);
+    }catch(err){
+        console.log(err);
+    }
+}
+
 // movie (openAPI)
 const slideContents = document.querySelector('.slide-contents');
 const moviesContents = document.querySelector('.movies-contents');

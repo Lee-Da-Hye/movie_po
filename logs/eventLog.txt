@@ -6454,3 +6454,17 @@
 2023-01-21  17:23:11  f27bd8e1-b576-44d5-9537-acb0582464bf  GET /images/movie2.png
 2023-01-21  17:23:11  5adad77d-0317-4aa4-bb55-e2698ff25c40  GET /images/movie3.png
 2023-01-21  17:23:11  060fa0d2-ae82-4fa9-bd2f-e525cd33b013  GET /favicon.ico
+2023-01-21  19:32:06  1d9ab1eb-17ab-42ae-aa3b-30b56dcb09f1  GET /
+2023-01-21  19:32:06  4ca72d11-0afc-4477-8b91-1d3c9de86053  GET /css/reset.css
+2023-01-21  19:32:06  cddfb04d-a30a-4b37-a5e0-7324702ef859  GET /css/common.css
+2023-01-21  19:32:06  b218840f-9589-495f-b953-cc87619c2881  GET /css/index.css
+2023-01-21  19:32:06  cd462257-cd3e-4506-9e67-0771e4fa2528  GET /images/movie1.png
+2023-01-21  19:32:06  7e80684d-e887-48aa-bf98-09be66cc7a25  GET /images/movie2.png
+2023-01-21  19:32:06  19ba6687-7ac4-4591-889b-1c90ec9d6092  GET /images/movie3.png
+2023-01-21  19:32:06  3d862e8f-9855-4a9d-b262-010c626aadfb  GET /script/index.js
+2023-01-21  19:32:06  cca79526-7f42-4c6d-823b-6f415d014f2c  GET /script/common.js
+2023-01-21  19:32:06  9b46c789-627e-42e2-bf55-da11869ae0cf  GET /script/createDom.js
+2023-01-21  19:32:07  ab3aa256-dee7-420e-b51c-c5492456cfce  GET /favicon.ico
+2023-01-21  19:32:11  1bbecef1-24bf-446c-9db8-f892e3280ac9  GET /css/common.css
+2023-01-21  19:32:11  ab6be59e-4825-4b99-ab1a-989625bfa30e  GET /css/reset.css
+2023-01-21  19:32:11  c499f578-dc1d-4108-9f16-a913bc760559  GET /css/index.css
