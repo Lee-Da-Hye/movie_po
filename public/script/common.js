@@ -31,3 +31,10 @@
                 num++;
             }
         }*/
+        //햄버거버튼 
+        const ham = document.querySelector('.ham-btn');
+        ham.addEventListener('click', showNavi)
+
+        function showNavi() {
+            document.querySelector('.ham-navigation').classList.toggle('active');
+}
