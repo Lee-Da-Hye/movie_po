@@ -10,7 +10,7 @@
     padding-bottom: 30px;
     font-size: 45px;
     padding-top: 30px;
-    color: rgb(23, 16, 107);
+    color: #251d81;
 }
 #username, #userpwd{
     width: 400px;
@@ -21,7 +21,7 @@
     
 }
 input[type="text"]:focus,input[type="password"]:focus{
-    outline: 1px solid rgb(23, 16, 107);;
+    outline: 1px solid #251d81;
 }
 #userpwd{
     margin-top: 5px;
@@ -38,7 +38,7 @@ input[type="text"]:focus,input[type="password"]:focus{
     border: none;
     cursor: pointer;
     text-align: center;
-    background-color: rgb(23, 16, 107);
+    background-color: #251d81;
     width: 400px;
     height: 40px;
     margin-top: 5px;

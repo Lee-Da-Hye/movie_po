@@ -6,7 +6,7 @@
 
 /* slide */
 .section1{
-    background-color: rgba(46, 67, 181, 0.083);
+    background-color: #eeeff9;
     padding-top: 50px;
     height: 500px;
 }
@@ -73,6 +73,7 @@
 }
 .bx{
     font-size: 45px;
+    color: #999999;
 }
 
 .slide_prev_button {
@@ -163,7 +164,7 @@ li {
 .reservation{
     cursor: pointer;
     font-size: 15px;
-    color: rgb(37, 29, 129);
+    color: #251d81;
     font-weight: bold;
 }
 .flex{
@@ -183,8 +184,16 @@ li {
     .lnb,.login{
         display: none;
     }
+    .bx{
+        font-size: 0;
+        color: #999999;
+    }
     .ham-navigation{
         display: block;
+    }
+    .slide_item img {
+        width: 100%;
+        height: 75%;
     }
 }
             

@@ -55,7 +55,7 @@
     top: 30%;
 }
 .reservation a{
-    background-color: rgb(23, 16, 107);;
+    background-color: #251d81;
     display: inline-block;
     vertical-align: center;
     color: #fff;
@@ -84,7 +84,7 @@
 }
 .bx-left-arrow-circle{
     font-size: 45px;
-    color: rgb(23, 16, 107);
+    color: #251d81;
 }
 @media screen and (max-width: 1266px) {
     .reservation a{

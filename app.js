@@ -48,6 +48,9 @@ let users = [
     { id:4,  username  : 'lee',  userpwd  : 23  }, 
     { id:5,  username  : 'lim',  userpwd  : 19  }, 
   ]
+  app.get('/join', (req, res)=>{
+    res.sendFile(path.join(__dirname, 'views' , 'join.html')) ;
+  })
   app.get('/login', (req, res)=>{
     res.sendFile(path.join(__dirname, 'views' , 'login.html')) ;
   })  

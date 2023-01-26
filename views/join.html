@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/join.css">
+</head>
+<style>
+
+/* html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    width: 45%;
+    border: 1px solid black;
+} */
+
+ /* input{
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.join-wrapper {
+    width: 45%;
+    margin: auto;
+    padding: 10px;
+}
+
+div {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.email input {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+.phone{
+    width: 100%;
+} */
+/* .phone {
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+}
+
+#phone1 {
+    width: 18%;
+}
+
+#phone2 {
+    width: 30%;
+}
+
+#phone3 {
+    width: 30%;
+} 
+
+.auth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.auth button {
+    width: 70%;
+}
+
+.timer div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.timer button {
+    width: 70%;
+}
+
+.area select {
+    width: 100%;
+    height: 40px;
+}
+
+.gender {
+    text-align: center;
+}
+
+.signUp button {
+    width: 100%;
+    cursor:pointer;
+}
+
+button{
+    cursor: pointer;
+    height: 30px;
+}
+
+.error{
+    font-size: 1px;
+    height: 20px;
+    color:red;
+    font-weight: 700;
+} */
+</style>
+<body>
+    <header>
+        <div class="header-wrap marginAuto">
+            <div class="logo">
+                <a href="/index"></a>
+            </div>
+            <nav class="navigation">
+                
+                <ul class="lnb">
+                    <li><a href="#">예매</a></li>
+                    <li><a href="/movie">영화</a></li>
+                    <li><a href="#">영화관</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <span><a href="/login">로그인</a></span>
+                <span><a href="/join">회원가입</a></span>
+            </div>
+            <nav class="ham-navigation">
+                <div class="ham-btn">
+                    <span class="ham hamTop"></span>
+                    <span class="ham hamMid"></span>
+                    <span class="ham hamBot"></span>
+                </div>
+                <div class="ham-login">
+                    <span><a href="/login">로그인</a></span>
+                    <span><a href="/join">회원가입</a></span>
+                </div>
+                <ul class="ham-lnb">
+                    <li><a href="#"><span>예매</span></a></li>
+                    <li><a href="/movie"><span>영화</span></a></li>
+                    <li><a href="#"><span>영화관</span></a></li>
+                    <li><a href="#"><span>마이페이지</span></a></li>
+                </ul>
+
+                
+            </nav>
+            
+        </div>
+    </header>
+    <form name="join_form">
+        <div class="join-wrapper">
+            <div class="title">
+                <h3>회원가입</h3>
+            </div>
+            <div class="memvber-certi">
+                <p>회원인증</p>
+                <button>휴대폰 인증</button>
+                <div class="checkdesc">
+                    <p>※ 휴대폰 인증 시 해당 정보 (생년월일, 이름, 휴대폰번호)는 자동으로 입력됩니다.</p>
+                    <p>※ 14세 미만 아동은 본인인증 후 부모님(법정대리인)동의가 필요합니다.</p>
+                    <p>※ 본인인증 시 제공되는 해당 인증기관에서 직접 수집하며, 인증 이외의 용도로 이용 또는 저장되지
+                          않습니다.</p>
+                </div>
+            </div>
+            <div class="personal-info">
+                <div class="birth">
+                    <p>생년월일</p>
+                    <input type="text" id="birth" maxlength="8" placeholder="생년월일 8자리(19960709)">
+                    <div id="birthError" class="error"></div>
+                </div>
+                <div class="name">
+                    <p>이름</p>
+                    <input type="text" id="name" placeholder="이름 입력">
+                    <div id="nameError" class="error"></div>
+                </div>
+                <div class="phone">
+                    <p>휴대폰번호</p>
+                    <input id="phone" type="text" maxlength="11" placeholder="-없이 휴대폰번호 입력">
+                    <div id="phoneError" class="error"></div>
+                </div>
+                <div class="email">
+                    <p>이메일</p>
+                    <input  type="text" id="email" placeholder="이메일 입력">
+                    <div id="emailError" class="error"></div>
+                </div>
+                <div class="password">
+                    <p>비밀번호</p>
+                    <input type="password" id="password" placeholder="비밀번호 입력">
+                    <div id="passwordError" class="error"></div>
+                </div>
+                <div class="passwordCheck">
+                    <p>비밀번호 확인</p>
+                    <input type="password" id="passwordCheck" placeholder="비밀번호입력 확인">
+                    <div id="passwordCheckError" class="error"></div>
+                </div>
+            </div>
+            <div class="Terms-wrap">
+                <div class="flip-box">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="check" id="check1" onclick='checkSelectAll(this)'>
+                            <span>서비스 이용약관 </span>
+                            <em class="blue">(필수) </em>
+                        </label>
+                        <span><i class='bx bx-chevron-down'></i></span>
+                    </div>
+                    <div class="privacy">
+                        <div class="terms">
+                            <div class="t1">이용약관</div>
+                            <div class="t2">제 1장 총칙</div>
+                            <div class="t3">제 1조 (목적)</div>
+                            <div class="t4">
+                                본 약관은 movie(이하 "회사"라 합니다)가 제공하는 movie 홈페이지(이하 "서비스"라 합니다)를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+                            </div>
+                            <div class="t3">제 2 조 (약관의효력및변경)</div>
+                            <div class="t4">
+                                1) 본 약관은 서비스를 이용하고자 본 약관에 동의한 모든 회원에 대하여 그 효력을 발생합니다. <br>
+                                2) 본 약관의 내용은 회원(서비스)가입 시 게재되거나 공지된 내용에 회원이 동의함으로써 그 효력이 발생합니다.  <br>
+                                3) 회사는 약관이 변경되는 경우 변경된 약관의 내용과 시행일을 정하여 시행일로부터 최소 7일 전, 고객에게 불리하게 변경되거나 중요한 내용인 경우에는 최소 30일 전에 회사의 홈페이지 또는 전자메일등을 통해 공지합니다.  <br>
+                                4) 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴/약관철회를 요청할 수 있으며, 변경된 약관의 효력 발생일 이후 탈퇴/약관철회 요청을 하지 않을 경우 약관의 변경 사항에 동의한 것으로 간주됩니다.  <br>
+                            </div>
+                            <div class="t3">제 3 조 (약관외준칙)</div>
+                            <div class="t4">
+                                1) 본 약관에 명시되지 아니한 사항에 대해서는 전자서명법, 전자상거래 등에서의 소비자보호에 관한 법률, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련 제반 규정 및 상관례에 따릅니다. <br>
+                                2) 본 약관에 명시되지 않은 서비스에 대한 사항은 당사 홈페이지, 모바일 또는 영화관 현장을 통한 해당 서비스 공지사항에 따릅니다. <br>
+                            </div>
+                            <div class="t3">제 4 조 (용어의정의)</div>
+                            <div class="t4">
+                                본 약관에서 사용하는 주요한 용어의 정의는 다음과 같습니다. <br>
+                                1) "사이트"란 회사가 재화•용역•정보를 이용자에게 제공하기 위하여 컴퓨터 등 정보통신 설비를 이용하여 재화•용역을 거래할 수 있도록 설정한 가상의 영업장 또는 회사가 운영하는 웹사이트(홈페이지, 모바일 웹/어플리케이션, SNS 등)를 말하며, 아울러 사이트를 운영하는 사업자의 의미로도 사용합니다. <br>
+                                2) “회원”이란 회사에 개인정보를 제공하여 회원등록을 한 자로서, 회사가 제공하는 정보를 수령하고 회사의 서비스를 계속적으로 이용할 수 있는 자를 의미하며, 하기 각호의 회원을 통칭합니다.v (1) 회원 : 디트릭스 홈페이지에서 가입한 회원을 말합니다. <br>
+                                (2) 비회원 : 회원에 가입하지 않고 디트릭스 홈페이지에서 제공하는 서비스를 이용하는 자를 말합니다. <br>
+                                (3) 아이디 : 회원의 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 문자나 숫자 혹은 그 조합을 말합니다(이하"ID"라 합니다). <br>
+                                (4) 비밀번호 : 회원이 부여 받은 ID와 일치된 회원임을 확인하고, 회원 자신의 비밀을 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 말합니다. <br>
+                                (5) 이용중지 : 회사가 정한 일정한 요건에 따라 일정기간 동안 서비스의 제공을 중지하는 것을 말합니다. <br>
+                            </div>
+                            <div class="t2">제 2 장서비스이용약관</div>
+                            <div class="t3">제 5 조 (회원가입)</div>
+                            <div class="t4">
+                                1) 회원 가입은 회사가 운영하는 사이트를 통해 가능하며, 서비스 가입 신청 시 본 약관과 개인정보 처리방침(‘개인정보수집 및 이용안내’ 및 ‘마케팅 활용 동의’ 등)′에 동의함으로써 회원 가입을 신청합니다. <br>
+                                2) 고객으로부터 회원 가입 신청이 있는 경우 회사는 자체 기준에 따른 심사를 거친 후 고객에게 회원 자격을 부여 할 수 있으며 회원 자격이 부여된 고객은 회사로부터 가입 완료 공지를 받은 시점부터 회원으로서의 지위를 취득합니다. <br>
+                            </div>
+                            <div class="t3">제 6 조 (이용약관의성립)</div>
+                            <div class="t4">
+                                1) 서비스신청 시 본 약관을 읽고 "동의함" 버튼을 클릭하면 본 약관에 동의하는 것으로 간주됩니다. <br>
+                                2) 이용약관은 서비스 이용희망자의 이용약관 동의 후 이용 신청에 대하여 회사가 승낙함으로써 성립하며, 이용 신청 및 회사의 승낙에 대해서는 본 약관 제7조 및 제8조에서 규정된 바에 따릅니다. <br>
+                                3) 『정보통신망이용촉진및정보보호등에관한법률』상 만14세 미만의 아동은 온라인으로 타인에게 개인정보를 보내기 전에 반드시 개인정보의 수집 및 이용목적에 대하여 충분히 숙지하고 법정대리인(부모)의 동의를 받아야 합니다. 법정 대리인의 동의를 받아도 청소년 관람불가 영화 예매 등 일부 서비스는 제한될 수 있습니다. <br>
+                            </div>
+                            <div class="t3">제 7 조 (이용신청)</div>
+                            <div class="t4">
+                                회원으로 가입하여 서비스를 이용하기를 희망하는 자는 회사가 정한 소정 양식에 따라 요청하는 개인 인적 사항을 제공하여 이용신청을 합니다.
+                            </div>
+                            <div class="t3">제 8 조 (이용신청의승낙)</div>
+                            <div class="t4">
+                                1) 회사는 제 7 조에 따른 이용신청에 대하여 특별한 사정이 없는 한 접수 순서대로 이용 신청을 승낙합니다. <br>
+                                2) 회사는 다음 각 호에 해당하는 경우 이용신청에 대한 승낙을 제한할 수 있고, 그 사유가 해소될 때까지 승낙을 유보할 수 있습니다. <br>
+                                (1) 기술상 서비스 제공이 불가한 경우 <br>
+                                (2) 기타 회사가 정한 이용신청 요건에 만족되지 않았을 경우 <br>
+                                (3) 본인의 실명으로 신청하지 않은 경우 <br>
+                                (4) 다른 사람의 명의를 사용하여 신청한 경우 <br>
+                                (5) 이용 신청 시 필요 사항을 허위로 기재하여 신청한 경우 <br>
+                                (6) 사회의 안녕과 질서 혹은 미풍양속을 저해할 목적으로 신청한 경우 <br>
+                                (7) 기타 회사가 정한 이용 신청 요건이 미비 된 경우 <br>
+                                3) 이용신청의 승낙을 유보하거나 승낙하지 아니하는 경우, 회사는 이를 이용신청자에게 알려야 합니다. 다만, 회사의 귀책사유 없이 이용신청자에게 통지할 수 없는 경우는 예외로 합니다. <br>
+                                4) 제 9조 2항, 제13조, 제15조 중 하나의의 사유로 인해 회원 탈퇴 또는 약관철회 조치를 당한 사람이 제7조의 이용신청을 하는 경우 회사는 이를 승낙하지 않을 수 있습니다. <br>
+                            </div>
+                            <div class="t3">제 9 조 (계약해지, 이용제한및재가입제한)</div>
+                            <div class="t4">
+                                1) 회원이 이용 계약을 해지(탈퇴) 하고자 하는 경우에는 회원 본인이 사이트나 고객센터 또는 E-MAIL등 기타 회사가 정하는 방법으로 회원탈퇴 또는 이용약관 철회를 요청할 수 있으며, 회사는 회원의 요청에 따라 조속히 회원 탈퇴에 필요한 제반 절차를 수행합니다. 단, 회원 탈퇴 시 이벤트 부정 이용 방지 등을 위하여 탈퇴일로부터 30일 이내에 재가입이 불가하며 회원 탈퇴 시 적립된 포인트 및 보유한 쿠폰 등의 개인 혜택들은 모두 삭제됩니다. <br>
+                                2) 회사는 회원이 다음 각 호에 해당하는 행위를 하였을 경우 사전통지 없이 이용약관을 해지하거나 또는 기간을 정하여 서비스 이용을 중지할 수 있습니다. <br>
+                                (1) 타인의 개인정보, ID 및 비밀번호를 도용한 경우 <br>
+                                (2) 가입한 이름이 실명이 아닌 경우 <br>
+                                (3) 타인의 명예를 손상시키거나 불이익을 주는 행위를 한 경우 <br>
+                                (4) 회사, 다른 회원 또는 제 3자의 지적재산권을 침해하는 경우 <br>
+                                (5) 공공질서 및 미풍양속에 저해되는 내용을 고의로 유포시킨 경우 <br>
+                                (6) 회원이 국익 또는 사회적 공익을 저해할 목적으로 서비스 이용을 계획 또는 실행하는 경우 <br>
+                                (7) 서비스 운영을 고의로 방해한 경우 <br>
+                                (8) 서비스의 안정적 운영을 방해할 목적으로 다량의 정보를 전송하거나 광고성 정보를 전송하는 경우 <br>
+                                (9) 정보통신설비의 오작동이나 정보의 파괴를 유발시키는 컴퓨터 바이러스 프로그램 등을 유포하는 경우 <br>
+                                (10) 정보통신윤리위원회 등 외부기관의 시정요구가 있거나 불법선거운동과 관련하여 선거관리위원회의 유권해석을 받은 경우 <br>
+                                (11) 회사의 서비스를 이용하여 얻은 정보를 회사의 사전 승낙 없이 복제 또는 유통시키거나 상업적으로 이용하는 경우 <br>
+                                (12) 회원이 자신의 홈페이지와 게시판에 음란물을 게재하거나 음란 사이트 링크하는 경우 <br>
+                                (13) 본 약관을 포함하여 기타 회사가 정한 이용 조건에 위반한 경우 <br>
+                                3) 회원이 자발적으로 탈퇴하거나 당사에 요청하여 회원 탈퇴한 때로부터 1개월이 이내에 재가입이 불가하며, 제9조 2항, 제13조 6항, 제15조에 따라 회원 자격이 상실된 회원의 경우에도 서비스 부정 이용 및 추가적인 피해 방지를 위하여 회원 자격이 상실된 날로부터 1개월 간 재가입 및 서비스 이용이 불가합니다 <br>
+                            </div>
+                            <div class="t3">제 10 조 (회원에대한통지)</div>
+                            <div class="t4">
+                                1) 회원에 대한 통지를 하는 경우, 회사는 회원이 등록한 e-mail 주소 또는 SMS 등으로 할 수 있습니다. <br>
+                                2) 회사는 불특정 다수 회원에 대한 통지의 경우 서비스 게시판 등에 게시함으로써 개별 통지에 갈음할 수 있습니다. <br>
+                            </div>
+                            <div class="t3">제 11 조 (회원정보의변경)</div>
+                            <div class="t4">
+                                1) 회원은 개인정보처리방침를 통해 언제든지 본인의 개인정보를 열람하고 수정할 수 있습니다.
+                                2)회원은 이용신청 시 기재한 사항이 변경되었을 경우 온라인으로 직접 수정을 하거나, dlekgp6521@gmail.com으로 연락하시어 수정 요청을 해야 하며, 회원정보를 변경하지 아니하여 발생되는 문제의 책임은 회원에게 있습니다.
+                            </div>
+                            <div class="t2">제 3 장계약당사자의의무</div>
+                            <div class="t3">제 12 조 (회사의의무)</div>
+                            <div class="t4">
+                                1) 회사는 특별한 사정이 없는 한 회원이 서비스 이용을 신청한 날에 서비스를 이용할 수 있도록 합니다. <br>
+                                2) 회사는 본 약관에서 정한 바에 따라 계속적이고 안정적인 서비스의 제공을 위하여 지속적으로 노력하며, 설비에 장애가 생기거나 멸실 된 때에는 지체 없이 이를 수리 복구하여야 합니다. 다만, 천재지변, 비상사태 또는 그 밖에 부득이한 경우에는 그 서비스를 일시 중단하거나 중지할 수 있습니다. <br>
+                                3) 회사는 서비스 관련하여 회원으로부터 소정의 절차에 의해 제기되는 의견이나 불만이 정당하다고 인정할 경우에는 적절한 절차를 거처 처리하여야 합니다. 처리 시 일정 기간이 소요될 경우 회원에게 그 사유와 처리 일정을 알려주어야 합니다. <br>
+                                4) 회사는 회원의 프라이버시 보호와 관련하여 개인정보처리방침 제 2 조에 제시된 내용을 지킵니다. <br>
+                                5) 회사는 본 약관의 체결, 계약사항의 변경 및 해지 등 이용고객과의 계약 관련 절차 및 내용 등에 있어 이용고객에게 편의를 제공하도록 노력합니다. <br>
+                            </div>
+                            <div class="t3">제 13 조 (회원의의무)</div>
+                            <div class="t4">
+                                1) 회원은 본 약관에서 규정하는 사항과 이용안내 또는 공지사항 등을 통하여 회사가 공지하는 사항을 준수하여야 하며, 기타 회사의 업무에 방해되는 행위를 하여서는 안됩니다. <br>
+                                2) 회원의 ID와 비밀번호에 관한 모든 관리책임은 회원에게 있습니다. 회원에게 부여된 ID와 비밀번호의 관리 소홀, 부정 사용에 의하여 발생하는 모든 결과에 대한 책임은 회원에게 있습니다. <br>
+                                3) 회원은 자신의 ID나 비밀번호가 부정하게 사용되었다는 사실을 발견한 경우에는 즉시 회사에 신고하여야 하며, 신고를 하지 않아 발생하는 모든 결과에 대한 책임은 회원에게 있습니다. <br>
+                                4) 회원은 회사의 사전승낙 없이는 서비스를 이용하여 영업활동을 할 수 없으며, 그 영업활동의 결과와 회원이 약관에 위반한 영업활동을 하여 발생한 결과에 대하여 회사는 책임을 지지 않습니다. 회원은 이와 같은 영업활동으로 회사가 손해를 입은 경우 회원은 회사에 대하여 손해배상의무를 집니다. <br>
+                                5) 회원은 회사의 명시적인 동의가 없는 한 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도, 증여할 수 없으며, 이를 담보로 제공할 수 없습니다. <br>
+                                6) 회원은 서비스 이용과 관련하여 다음 각 호에 해당되는 행위를 하여서는 안됩니다. <br>
+                                (1) 다른 회원의 ID와 비밀번호 등 개인정보를 도용하는 행위 <br>
+                                (2) 본 서비스를 통하여 얻은 정보를 회사의 사전승낙 없이 회원의 이용 이외 목적으로 복제하거나 이를 출판 및 방송 등에 사용하거나 제3자에게 제공하는 행위 <br>
+                                (3) 타인의 특허, 상표, 영업비밀, 저작권 기타 지적재산권을 침해하는 내용을 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위 <br>
+                                (4) 공공질서 및 미풍양속에 위반되는 저속, 음란한 내용의 정보, 문장, 도형 등을 전송, 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위 <br>
+                                (5) 모욕적이거나 위협적이어서 타인의 프라이버시를 침해할 수 있는 내용을 전송, 게시, 전자메일 또는 기타의 방법으로 타인에게 유포하는 행위 <br>
+                                (6) 범죄와 결부된다고 객관적으로 판단되는 행위 <br>
+                                (7) 회사의 승인을 받지 않고 다른 사용자의 개인정보를 수집 또는 저장하는 행위 <br>
+                                (8) 기타 관계법령에 위배되는 행위 <br>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="check" id="check2" onclick='checkSelectAll(this)'>
+                            <span>개인정보 수집 및 이용 동의</span>
+                            <em class="blue">(필수)</em>
+                        </label>
+                        <span><i class='bx bx-chevron-down'></i></span>
+                    </div>
+                    <div class="privacy">
+                        <div class="terms">
+                            <div class="t1">개인정보처리방침</div>
+                            <div class="t4">
+                                movie(이하 ‘회사’ 로 표기)는 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다. 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다. <br>
+                                ○ 본방침은 2022년 1월10일부터시행됩니다.
+                            </div>
+                            <div class="t3">1. 개인정보의처리목적및수집</div>
+                            <div class="t4">
+                                회사는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="check" id="check3" onclick='checkSelectAll(this)'>
+                            <span>개인정보의 제3자 제공</span>
+                            <em class="blue">(필수)</em>
+        
+                        </label>
+                        <span><i class='bx bx-chevron-down'></i></span>
+                    </div>
+                    <div class="privacy">
+                            <div class="t2">
+                                movie는 예매서비스 제공에 필요한 최소 정보만 제공하고 있으며, 정보제공에 동의하지 않을 경우 서비스를 이용하실 수 없습니다.
+                            </div>
+                            <table class="table1">
+                                <tbody>
+                                    <tr>
+                                        <td>제공받는자</td>
+                                        <td>
+                                            <p>영화관리스트 보기</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이용목적</td>
+                                        <td>
+                                            <p>티켓 현장 발권,
+                                                예매 확인 및 취소 등 고객안내 필요</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>제공항목</td>
+                                        <td>
+                                            <p>성명, 아이디, 전화번호, 휴대폰번호, 이메일 주소, 생년월일</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>보유 및 이용기간</td>
+                                        <td>
+                                            <p>개인정보 이용목적 달성 시까지
+                                                (단, 관계 법령의 규정에 의해 보존의 필요가 있는 경우 및 사전 동의를 득한 경우 해당 보유기간까지)</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="check" id="check4" onclick='checkSelectAll(this)'>
+                            <span>이벤트 및 정보수신 선택</span>
+                            <em class="blue">(선택)</em>
+                        </label>
+                    </div>
+                    <div class="chks">
+                        <label>
+                            <input type="checkbox" name="check3" id="check5">
+                            <span>SMS</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="check4" id="check6">
+                            <span>앱 Push 알림</span>
+                        </label>
+                        <p>
+                            이메일, SMS,앱Push알림 수신 동의를 하시면 다양한 이벤트/혜택 소식을 받으실 수 있습니다. 제공 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="agree-all">
+                    <label>
+                        <input type="checkbox" name="chkall" class="checkbox" onclick='chkAll(this)'>
+                        <em></em>
+                        <span>모든 약관에 동의합니다.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="signUp">
+                <button type="button" id="signUpButton"  onclick="signUpCheck()">회원가입</button>
+            </div>
+        </div>
+    </form>
+    <script src="/script/join.js"></script>
+    <script src="/script/common.js"></script>
+
+</body>
+</html>

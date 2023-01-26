@@ -20,7 +20,7 @@ header{
 .logo a{
     font-family: 'Flavors', cursive;
     font-size: 4.5em;
-    color: rgb(23, 16, 107);
+    color: #251d81;
 }
 .navigation{
     display: flex;
@@ -59,10 +59,10 @@ header{
     clip-path: circle(25px at calc( 100% - 45px) 45px);
     transition: 0.3s ease-in-out;
     }
-    .ham-navigation.active{
+.ham-navigation.active{
     clip-path: circle(75%);
-    }
-    .ham-navigation .ham-btn{
+}
+.ham-navigation .ham-btn{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -70,57 +70,61 @@ header{
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    }
-    .ham-navigation .ham-btn span{
+}
+.ham-navigation .ham-btn span{
     position: absolute;
     left: 50%;
     width: 50%;
     height: 3px;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    }
-    .ham-navigation .ham-btn span:nth-child(1){
+}
+.hamTop{
     top: 30%;
-    }
-    .ham-navigation .ham-btn span:nth-child(2){
+}
+.hamMid{
     top: 50%;
-    }
-    .ham-navigation .ham-btn span:nth-child(3){
+}
+.hamBot{
     top: 70%;
-    }
-    .ham-navigation.active .ham-btn span:nth-child(1){
+}
+.ham-navigation.active .hamTop{
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    }
-    .ham-navigation.active .ham-btn span:nth-child(2){
+}
+.ham-navigation.active .hamMid{
     opacity: 0;
-    }
-    .ham-navigation.active .ham-btn span:nth-child(3){
+}
+.ham-navigation.active .hamBot{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    .ham-lnb{ text-align: center; font-size: 44px;
+}
+.ham-lnb{ 
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 30px;
     line-height: 2;
-    }
-    .ham-lnb a{ color:#fff; 
-    /* background-color: antiquewhite; */
+    padding-top: 10px;
+}
+.ham-lnb a{ color:#fff; 
+/* background-color: antiquewhite; */
     position: relative;
-    }
-    .ham-lnb span{ position: relative; z-index: 1;}
-    .ham-lnb a::after{ 
+}
+.ham-lnb span{ position: relative; z-index: 1;}
+.ham-lnb a::after{ 
     content:'';
     display: block;
     width:  0px; 
     height: 100%;
-    background-color: red;
+    background-color: #251d81;
     transition: 1s;
     position: absolute;
     z-index: 0; 
     left: 0; top:0;
-    }
-    .ham-lnb a:hover::after{ 
+}
+.ham-lnb a:hover::after{ 
     width:  100%; 
-    }
+}
 .title{
     overflow: hidden;
     white-space: nowrap;
@@ -145,7 +149,6 @@ address{
     padding-bottom: 40px;
 }
 @media screen and (max-width: 1130px) {
-
     .lnb{
         gap: 90px;
     }
@@ -156,5 +159,40 @@ address{
     }
     .ham-navigation{
         display: block;
+    }
+    .ham-login{
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+    .ham-login > span{
+        padding-bottom: 20px;
+    }
+    .ham-login > span:nth-child(1) > a{
+        background-color: #251d81;
+        padding: 10px;
+        width: 400px;
+        display: inline-block;
+        text-align: center;
+    }
+    .ham-login > span:nth-child(2) > a{
+        font-size: 13px;
+    }
+    
+    .ham-login > span:nth-child(2) > a:after{
+       
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 6px;
+        height: 6px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-135deg);
+        margin: -2px 0 0 4px;
     }
 }

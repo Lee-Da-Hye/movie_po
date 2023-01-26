@@ -31,13 +31,17 @@
         </nav>
         <div class="login">
             <span><a href="/login">로그인</a></span>
-            <span><a href="#">회원가입</a></span>
+            <span><a href="/join">회원가입</a></span>
         </div>
         <nav class="ham-navigation">
             <div class="ham-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="ham hamTop"></span>
+                <span class="ham hamMid"></span>
+                <span class="ham hamBot"></span>
+            </div>
+            <div class="ham-login">
+                <span><a href="/login">로그인</a></span>
+                <span><a href="/join">회원가입</a></span>
             </div>
             <ul class="ham-lnb">
                 <li><a href="#"><span>예매</span></a></li>
@@ -46,10 +50,7 @@
                 <li><a href="#"><span>마이페이지</span></a></li>
             </ul>
 
-            <div class="ham-login">
-                <span><a href="#">로그인</a></span>
-                <span><a href="#">회원가입</a></span>
-            </div>
+            
         </nav>
         
     </div>
@@ -107,7 +108,59 @@
 </footer>
   <script src="/script/common.js"></script>
   <script>
-    const loginbtn = document.querySelector('.loginbtn');
+    window.addEventListener("load", function() {
+    var elUserid = document.getElementById("username");
+    console.log(elUserid);
+    var elUserpwd = document.getElementById("userpwd");
+    
+    //elUserid에 focus
+    elUserid.focus();
+    
+    elUserid.addEventListener("keyup", function(e) {
+      //keycode를 확인해야함.
+      var keycode = e.which || e.keyCode;
+      //'enter'입력 시
+      if(keycode == 13) {
+        //값 저장
+        var userid = e.currentTarget.value;
+        if(userid) {
+          //값이 있으면 true이므로 elUserpwd에 focus
+          elUserpwd.focus();
+        } else {
+          e.currentTarget.style.backgroundColor = "#ff0";
+          //입력을 다시 시작하면 이벤트 발생
+          e.currentTarget.addEventListener("keydown", function(e) {
+            e.currentTarget.style.backgroundColor = "transparent";
+          }, {
+            //한 번만 처리.
+            once: true
+          });
+        }
+        
+      }
+    });
+    
+    elUserpwd.addEventListener("keyup", function(e) {
+      var keycode = e.which || e.keyCode;
+      if(keycode == 13) {
+        var userpwd = e.currentTarget.value;
+        if(userpwd) {
+          alert("로그인 했습니다.");
+        } else {
+          e.currentTarget.style.backgroundColor = "#ff0";
+          e.currentTarget.addEventListener("keydown", function(e) {
+            e.currentTarget.style.backgroundColor = "transparent";
+          }, {
+            once: true
+          });
+        }	
+
+      }
+    });
+  });
+  </script>
+  <script>
+    /*const loginbtn = document.querySelector('.loginbtn');
     const username = document.querySelector('#username');
     const userpwd = document.querySelector('#userpwd');
 
@@ -135,7 +188,7 @@
             alert(json.message);
           }
         });
-    })
+    })*/
   </script>
 </body>
 
