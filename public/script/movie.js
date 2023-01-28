@@ -142,3 +142,4 @@ labels.forEach((label, index)=>{
     })
 })
 labels[0].click();
+
