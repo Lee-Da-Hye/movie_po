@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 .login-box > h1{
     text-align: center;
@@ -103,4 +101,49 @@ input[type="text"]:focus,input[type="password"]:focus{
 .apple{
     background-color: #000;
     color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .login-box{
+        width: 300px;
+        margin: auto;
+    }
+
+    .platform-loginbtn>button{
+        display: block;
+        width: 300px;
+        height: 45px;
+        margin-top: 5px;
+        border: 1px solid;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    .loginbtn{
+        display: inline-block;
+        background-color: transparent;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        background-color: #251d81;
+        width: 300px;
+        height: 40px;
+        margin-top: 5px;
+    }
+    #username, #userpwd{
+        width: 300px;
+        height: 40px;
+        padding-left: 14px;
+        border: 1px solid ;
+        border-radius: 5px;
+        
+    }
+    .line::before{
+        content: '';
+        display: inline-block;
+        width: 300px;
+        border-bottom: 1px solid #222;
+    }
 }
