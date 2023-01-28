@@ -192,3 +192,9 @@ input[id="check5"]:checked, input[id="check6"]:checked {
     color:red;
     font-weight: 700;
 }
+@media screen and (max-width: 480px) {
+    .join-wrapper{
+        width: 340px;
+        margin: 90px auto;
+    }
+}
