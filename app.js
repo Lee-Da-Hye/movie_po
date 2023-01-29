@@ -39,6 +39,9 @@ app.get('/info' , (req, res)=>{
 app.get('/movie' , (req, res)=>{ 
   res.sendFile( path.join(__dirname, 'views', 'movie.html'));
 })
+app.get('/mypage' , (req, res)=>{ 
+  res.sendFile( path.join(__dirname, 'views', 'mypage.html'));
+})
 
 // database
 let users = [

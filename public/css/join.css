@@ -187,7 +187,7 @@ input[id="check5"]:checked, input[id="check6"]:checked {
     cursor: pointer;
 }
 .error{
-    font-size: 13px;
+    font-size: 11px;
     height: 20px;
     color:red;
     font-weight: 700;

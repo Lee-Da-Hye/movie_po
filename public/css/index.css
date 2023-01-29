@@ -184,10 +184,7 @@ li {
     .lnb,.login{
         display: none;
     }
-    .bx{
-        font-size: 0;
-        color: #999999;
-    }
+    
     .ham-navigation{
         display: block;
     }

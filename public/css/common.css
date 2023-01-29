@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Flavors&display=swap');
 
+html,body {
+    height: 100%;
+    
+  }
 header{
     width: 100%;
     border-bottom: 1px solid rgb(83, 83, 83);
@@ -132,9 +136,13 @@ header{
     height: 2em;
 }
 footer{
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 80px;
     background-color: #ccc;
     color: #fff;
+}
+.footer-bottom{
+    width: 100%;
 }
 .footer-bottom h1{
     padding-top: 40px;

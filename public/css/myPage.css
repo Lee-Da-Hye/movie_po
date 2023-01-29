@@ -1,0 +1,214 @@
+button{
+    cursor: pointer;
+}
+.mypg-container{
+    width:500px;
+    margin:auto;
+    height: auto;
+    /*min-height: 100%;*/
+    min-height: 500px;
+}
+.mypg-btns{ 
+    display: flex;
+    gap: 10px;
+    padding-top: 40px;
+    
+}
+.mypg-btn.active{
+    font-weight: bold;
+    border-bottom: 5px solid #251d81;
+}
+.mypg-btn{ 
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.mypg-btn:nth-child(1){
+    color:#000; 
+}
+.mypg-tab-contents{ 
+    position: relative;
+}
+
+
+/*mypg*/
+.mypg{ 
+    /*position: absolute; */
+    width:100%; 
+    display: none;
+    padding-top: 40px;
+}
+.userId > p, .userPw>p{
+    font-size: 11px;
+    color: #8f9bb3;
+    font-weight: 600;
+}
+.userPw{
+    padding-top: 20px;
+}
+.mypg2 > input{
+    width: 100%; 
+    background: rgb(146, 76, 76);
+    display: none;  
+}
+.mypg input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #d8dbe1;
+    width: 100%;
+    outline: none;
+    padding: 10px 0;
+}
+.mypg-IdSv{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.mypg-IdSv > span{
+    font-size: 11px;
+}
+.mypg-login{
+    padding-top: 20px
+}
+.mypg-login > button{
+    width: 100%;
+    height: 40px;
+    font-weight: 800;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #251d81;
+    color: #fff;
+}
+.mypg-find{
+    font-size: 11px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 20px;
+}
+.telbtn button{
+    position: absolute;
+    right: 0;
+
+    width: 80px;
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px
+}
+.telbtn input[type="text"]{
+    width: 84%;
+
+}
+/*mypg2*/
+.mypg2 > ul{
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+    vertical-align: middle;
+    background: #fff;
+    text-align: center;
+}
+.mypgResv.active{
+    border: 1px solid #251d81;;
+}
+
+
+.mypg2 > input:nth-of-type(1) ~ ul > li:nth-child(1),
+.mypg2 > input:nth-of-type(2) ~ ul > li:nth-child(2){
+    display: inline-block;
+}
+.mypg2 > ul > li > label{
+    display: block;
+    cursor: pointer;
+    font-size: 15px;	
+    border: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+}
+.mypg2 > ul > li:nth-child(1) > label{
+        border-radius: 5px 0 0 5px;
+}
+.mypg2 > ul > li:nth-child(2) > label{
+    border-radius: 0 5px 5px 0;
+}
+.mypg2 > div{
+    display: none;
+}
+.mypg2 > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+.mypg2 > input:nth-of-type(2):checked ~ div:nth-of-type(2){
+    display: block;
+}
+
+.personal-info p, .resev-info p{
+    font-size: 11px;
+    color: #8f9bb3;
+    font-weight: 600;
+    padding-top: 20px;
+   
+}
+.mypg2 input[type="text"]::placeholder,.mypg2 input[type="password"]::placeholder{
+    color:  #d8dbe1;
+    font-weight: 600;
+}
+.phone{
+    position: relative;
+}
+
+.terms{
+    background: #f6f6f6;
+    font-size: 11px;
+    padding: 18px 20px;
+    overflow: auto;
+    height: 120px;
+    margin-top: 20px;
+}
+.terms .t2{
+    margin-bottom: 27px;
+}
+.resev{
+    padding-top: 20px;
+}
+.resev button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #251d81;
+    color: #fff;
+}
+.mypg.active{
+    display: block;
+}
+.consent {
+    text-align: center;
+    font-size: 13px;
+    padding: 15px 0;
+}
+.consent > label{
+    padding-left: 10px;
+}
+.error {
+    font-size: 11px;
+    height: 20px;
+    color: red;
+    font-weight: 700;
+}
+@media screen and (max-width: 480px) {
+    .mypg-container{
+        width: 340px;
+        margin: 90px auto;
+    }
+    .mypg2 > ul > li > label {
+        width: 180px;
+    }
+    .telbtn input[type="text"] {
+        width: 75%;
+    }
+}
