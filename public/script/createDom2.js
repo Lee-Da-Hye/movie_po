@@ -4,7 +4,7 @@ function createDom( movie, newDom){
             <div class="inner">
                 <div class="info-box marginAuto">
                     <div class="movie-img">
-                        <img src="${movie.large_cover_image}" alt="">
+                        <img src="${movie.large_cover_image}" alt="${movie.title}">
                     </div>
                     <div class="info-top">
                         <div class="detail-top">
