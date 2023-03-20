@@ -1,3 +1,39 @@
+// movie (openAPI)
+const slideContents = document.querySelector('.slide-contents');
+const moviesContents = document.querySelector('.movies-contents');
+
+let allMovies = [];
+let currentMovies = [];
+
+const URL = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=1';
+const url = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=35';
+
+
+fetch(URL).then(data => data.json())
+.then(data =>{
+    console.log(data);
+    allMovies = data.data.movies.map(movie => movie);
+    movieList(allMovies,moviesContents );
+});
+
+fetch(url).then(data => data.json())
+.then(data =>{
+    console.log(data);
+    currentMovies = data.data.movies.map(movie => movie);
+    movieList(currentMovies,slideContents);
+})
+
+function movieList(movies,newDom){
+    let str = '';
+    console.log(movies);
+
+
+for(movie of movies){
+    createDom(movie,newDom);
+    str += createDom(movie,newDom);
+
+}
+newDom.innerHTML = str;
 function createDom( movie, newDom){
     let str = `
         <div class="movie-box">
