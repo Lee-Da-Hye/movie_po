@@ -26,5 +26,4 @@
             <div class="slide-contents"></div>
         </div>
     </section>
-    <script src="/src/main.js?<?=time()?>"></script>
     <script src="/src/movie.js?<?=time()?>"></script>
