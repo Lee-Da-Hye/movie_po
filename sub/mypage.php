@@ -26,7 +26,7 @@
                 </div>
                 <div class="mypg-find">
                     <span><a href="#">아이디/비밀번호찾기 |</a></span>
-                    <span><a href="/join">회원가입</a></span>
+                    <span><a href="/?sub=join">회원가입</a></span>
                 </div>
             </div>
             <div class="mypg mypg2">
