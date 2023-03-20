@@ -34,6 +34,7 @@ for(movie of movies){
 
 }
 newDom.innerHTML = str;
+}
 function createDom( movie, newDom){
     let str = `
         <div class="movie-box">
