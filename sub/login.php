@@ -20,7 +20,7 @@
             <button class="loginbtn">로그인</button>
           </div>
           <div class="registerbtn">
-            <span><a href="/join" class="no-line">회원가입 </a></span>
+            <span><a href="/?sub=join" class="no-line">회원가입 </a></span>
             <span><a href="#">ID 찾기</a></span>
             <span><a href="#">비밀번호 찾기</a></span>
           </div>

@@ -10,8 +10,12 @@
                     <div class="slide_item item3">
                         <img src="/src/images/movie3.png" alt="크리스마스 캐럴">
                     </div>
-                <div class= "slide_prev_button slide_button" href="#"><i class='bx bxs-chevrons-left'></i></div>
-                <div class="slide_next_button slide_button" href="#"><i class='bx bxs-chevrons-right' ></i></div>
+                <div class= "slide_prev_button slide_button" href="#">
+                    <i class='bx bxs-chevrons-left'></i>
+                </div>
+                <div class="slide_next_button slide_button" href="#">
+                    <i class='bx bxs-chevrons-right' ></i>
+                </div>
                 <ul class="slide_pagination"></ul>
             </div>    
     </section>
@@ -20,7 +24,9 @@
             <div class="plus">
                 <h2>영화 목록</h2>
                 <div>
-                    <a href="/?sub=movie"><i class='bx bx-plus'></i></a>
+                    <a href="/?sub=movie">
+                        <i class='bx bx-plus'></i>
+                    </a>
                 </div>
             </div>
             
@@ -35,7 +41,9 @@
             <div class="plus">
                 <h2>추천 목록</h2>
                 <div>
-                    <a href="/?sub=movie"><i class='bx bx-plus'></i></a>
+                    <a href="/?sub=movie">
+                        <i class='bx bx-plus'></i>
+                    </a>
                 </div>
             </div>
             <div class="slide-contents">

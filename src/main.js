@@ -59,7 +59,7 @@ async function searchMovies(detail_URL){
         console.log(movie);
         localStorage.setItem('info', JSON.stringify(movie));
 
-        location.href = '/info' ;
+        location.href = '/?sub=info' ;
         // 디테일 페이지 열기 
     }catch(err){
         console.log(err);
@@ -69,7 +69,7 @@ async function searchMovies(detail_URL){
 
 
 
-// 슬라이크 전체 크기(width 구하기)
+// 슬라이드 전체 크기(width 구하기)
 const slide = document.querySelector(".slide");
 let slideWidth = slide.clientWidth;
 

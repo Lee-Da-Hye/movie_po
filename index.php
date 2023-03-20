@@ -10,15 +10,15 @@
 <link href="/src/common.css?<?=time()?>" type="text/css" rel="stylesheet" />
 <!-- /Global CSS -->
 <?php if (isset($_GET['sub'])) {?>
-<link href="./src/<?=$_GET['sub']?>.css?<?=time()?>" type="text/css" rel="stylesheet" />
+<link href="/src/<?=$_GET['sub']?>.css?<?=time()?>" type="text/css" rel="stylesheet" />
 <?php } else { ?>
-<link href="./src/main.css?<?=time()?>" type="text/css" rel="stylesheet" />
+<link href="/src/main.css?<?=time()?>" type="text/css" rel="stylesheet" />
 <?php }?>
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="/src/common.js?<?=time()?>"></script>
+<script type="text/javascript" src="/src/common.js"></script>
 </head>
 <body>
 <!-- 상단 영역 -->
@@ -33,9 +33,9 @@
 <main>
         <?php
         if(isset($_GET['sub'])) {
-            include "./sub/{$_GET['sub']}.php";
+            include "/sub/{$_GET['sub']}.php";
         } else {
-            include "./main.php";
+            include "/main.php";
         }
         ?>
 </main>

@@ -122,7 +122,7 @@ async function searchMovies(detail_URL){
         console.log(movie);
         localStorage.setItem('info', JSON.stringify(movie));
 
-        location.href = '/info' ;
+        location.href = '/?sub=info' ;
         // 디테일 페이지 열기 
     }catch(err){
         console.log(err);
