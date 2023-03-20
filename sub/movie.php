@@ -27,4 +27,3 @@
         </div>
     </section>
     <script src="/src/movie.js?<?=time()?>"></script>
-    <script src="/src/main.js?<?=time()?>"></script>
