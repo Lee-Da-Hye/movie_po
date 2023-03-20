@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="/src/common.js"></script>
+<script type="text/javascript" src="/src/common.js?<?=time()?>"></script>
 </head>
 <body>
 <!-- 상단 영역 -->
