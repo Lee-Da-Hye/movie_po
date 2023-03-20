@@ -34,8 +34,6 @@ function textAnimation(){
 
 //햄버거버튼 
 const ham = document.querySelector('.ham-btn');
-ham.addEventListener('click', showNavi)
-
-function showNavi() {
+ham.addEventListener('click', ()=>{
     document.querySelector('.ham-navigation').classList.toggle('active');
-}
+})
