@@ -42,12 +42,12 @@ function createDom( movie, newDom){
 }
 
 /*info에 뿌리기*/
-/*async function loadMovieDetail(){
+async function loadMovieDetail(){
         const movie = await JSON.parse(localStorage.getItem('info'));
         console.log(movie);
         document.querySelector('.detail-container').innerHTML = createDom(movie);
     }
-loadMovieDetail();*/
+loadMovieDetail();
 
 
 /*이전 페이지*/
