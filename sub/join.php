@@ -284,4 +284,4 @@
     </form>
 
 
-    <script src="/script/join.js?<?=time()?>"></script>
+    <script src="/src/join.js?<?=time()?>"></script>

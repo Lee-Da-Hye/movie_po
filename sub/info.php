@@ -6,4 +6,4 @@
     </section>
 
     <button class="goPrevPage"><i class='bx bx-left-arrow-circle'></i></button>
-    <script src="/script/info.js?<?=time()?>"></script>
+    <script src="/src/info.js?<?=time()?>"></script>

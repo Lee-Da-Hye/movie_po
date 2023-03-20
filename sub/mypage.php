@@ -126,4 +126,4 @@
             </div>
         </div>
     </section>
-    <script src="/script/myPage.js?<?=time()?>"></script>
+    <script src="/src/myPage.js?<?=time()?>"></script>

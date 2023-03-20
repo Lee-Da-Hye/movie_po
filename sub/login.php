@@ -36,4 +36,4 @@
     
   </section>
 
-  <script src="/script/login.js?<?=time()?>"></script>
+  <script src="/src/login.js?<?=time()?>"></script>

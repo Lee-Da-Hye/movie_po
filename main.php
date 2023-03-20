@@ -45,7 +45,7 @@
     </section>
     
     
-    <script src="/script/main.js?<?=time()?>"></script>
+    <script src="/src/main.js?<?=time()?>"></script>
 
 </body>
 </html>
