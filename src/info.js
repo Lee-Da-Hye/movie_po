@@ -41,7 +41,7 @@ function createDom( movie, newDom){
         
 }
 
-/*이전 페이지*/
+/*info에 뿌리기*/
 async function loadMovieDetail(){
         const movie = await JSON.parse(localStorage.getItem('info'));
         console.log(movie);
@@ -49,6 +49,7 @@ async function loadMovieDetail(){
     }
 loadMovieDetail();
 
+/*이전 페이지*/
 document.querySelector('.goPrevPage').addEventListener('click', ()=>{
     history.back();
     // 자세히 보기 페이지는 어느 페이지에서 사용될 지 모름 

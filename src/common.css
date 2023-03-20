@@ -258,10 +258,6 @@ address{
     .lnb,.login{
         display: none;
     }
-    
-    .ham-navigation{
-        display: block;
-    }
     .slide_item img {
         width: 100%;
         height: 75%;
