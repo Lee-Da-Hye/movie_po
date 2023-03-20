@@ -143,14 +143,16 @@ li {
 .bx-plus:hover{
     rotate: 90deg;
 }
-.movies-contents,.slide-contents{
+.movies-contents,
+.slide-contents{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding-top: 30px;
     
 }
-.movies-contents img, .slide-contents img{
+.movies-contents img, 
+.slide-contents img{
     width: 100%;
 }
 .detail-btn{

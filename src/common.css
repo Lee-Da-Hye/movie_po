@@ -48,11 +48,9 @@ header{
 .login a{
     font-size: 15px;
 }
-.ham-navigation{
-    display: none;
-}
 /* 햄버거버튼 */
 .ham-navigation{
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -192,7 +190,6 @@ address{
     }
     
     .ham-login > span:nth-child(2) > a:after{
-       
         content: '';
         display: inline-block;
         vertical-align: middle;

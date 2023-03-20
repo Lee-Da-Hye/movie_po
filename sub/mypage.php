@@ -1,57 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Movie</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/myPage.css">
-</head>
 
-<body>
-    <header>
-        <div class="header-wrap marginAuto">
-            <div class="logo">
-                <a href="/index"></a>
-            </div>
-            <nav class="navigation">
-                
-                <ul class="lnb">
-                    <li><a href="#">예매</a></li>
-                    <li><a href="/movie">영화</a></li>
-                    <li><a href="#">영화관</a></li>
-                    <li><a href="/mypage">마이페이지</a></li>
-                </ul>
-            </nav>
-            <div class="login">
-                <span><a href="/login">로그인</a></span>
-                <span><a href="/join">회원가입</a></span>
-            </div>
-            <nav class="ham-navigation">
-                <div class="ham-btn">
-                    <span class="ham hamTop"></span>
-                    <span class="ham hamMid"></span>
-                    <span class="ham hamBot"></span>
-                </div>
-                <div class="ham-login">
-                    <span><a href="/login">로그인</a></span>
-                    <span><a href="/join">회원가입</a></span>
-                </div>
-                <ul class="ham-lnb">
-                    <li><a href="#"><span>예매</span></a></li>
-                    <li><a href="/movie"><span>영화</span></a></li>
-                    <li><a href="#"><span>영화관</span></a></li>
-                    <li><a href="/mypage"><span>마이페이지</span></a></li>
-                </ul>
-
-                
-            </nav>
-            
-        </div>
-    </header>
-    <div class="mypg-container">
+    <section class="mypg-container">
         <!-- ul, button, a, span -->
         <ul class="mypg-btns">
             <li class="mypg-btn">회원 로그인</li>
@@ -148,8 +96,6 @@
                         </form>
                     </div>
                 
-                        
-                
                 <div class="resev-info">
                     <form name="reserve_form">
                         <div class="name">
@@ -179,23 +125,5 @@
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <div class="footer-bottom marginAuto">
-            <h1>movie</h1>
-            <address>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
-                <span>TEL : 02-0000-0000/</span>
-                <span>FAX : 02-0000-0000<br></span>
-            </address>
-            <div class="footer-copyright">
-                <p class="right">개인정보처리방침</p>
-                <p>Copyright © Lorem ipsum dolor All rights reserved</p>
-            </div>
-        </div>
-
-    </footer>
-    <script src="/script/common.js"></script>
-    <script src="/script/myPage.js"></script>
-</body>
-</html>
+    </section>
+    <script src="/script/myPage.js?<?=time()?>"></script>
