@@ -45,24 +45,7 @@
     </section>
     
     
-    <script src="/script/index.js"></script>
-    <script src="/script/common.js"></script>
-    <script src="/script/createDom.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // document.cookie : 문자열 
-            if (document.cookie.includes('ok')) {
-                alert('로그인');
-                // 도큐먼트에 '아이디' 찍어서 표시해야함 
-            }
-            console.log(document.cookie.includes('ok'))
-            
-        })
-        /*document.cookie = 'login=ok; expires=0';*/
-
-        // 로그아웃 : 쿠키 삭제  expires=0
-        // document.cookie = 'login=ok;expires=0';
-    </script>
+    <script src="/script/main.js?<?=time()?>"></script>
 
 </body>
 </html>
