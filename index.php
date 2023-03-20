@@ -33,9 +33,9 @@
 <main>
         <?php
         if(isset($_GET['sub'])) {
-            include "/sub/{$_GET['sub']}.php";
+            include "./sub/{$_GET['sub']}.php";
         } else {
-            include "/main.php";
+            include "./main.php";
         }
         ?>
 </main>
