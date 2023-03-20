@@ -100,7 +100,6 @@ newDom.innerHTML = str;
 /*moviesContents.innerHTML = str;
 slideContents.innerHTML = str;*/
 const btns = document.querySelectorAll('.detail-btn');
-btns.innerHTML = '상세정보';
     btns.forEach((btn)=>{
         btn.addEventListener('click', (event)=>{
             let id = event.target.id; 
@@ -129,20 +128,7 @@ async function searchMovies(detail_URL){
     }
 }
 
-//밑줄
-let labels = document.querySelectorAll('label');
-console.log(labels);
-
-labels.forEach((label, index)=>{
-    label.addEventListener('click', ()=>{
-        for(label of labels){
-            label.classList.remove('active');
-        }
-        labels[index].classList.add('active');
-    })
-})
-labels[0].click();
-
+/*createDom*/
 function createDom( movie, newDom){
     let str = `
         <div class="movie-box">
@@ -160,3 +146,18 @@ function createDom( movie, newDom){
     return str;
         
 }
+
+
+//밑줄
+let labels = document.querySelectorAll('label');
+console.log(labels);
+
+labels.forEach((label, index)=>{
+    label.addEventListener('click', ()=>{
+        for(label of labels){
+            label.classList.remove('active');
+        }
+        labels[index].classList.add('active');
+    })
+})
+labels[0].click();

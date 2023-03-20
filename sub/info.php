@@ -8,4 +8,3 @@
         </i>
     </button>
     <script src="/src/info.js?<?=time()?>"></script>
-    <script src="/src/main.js?<?=time()?>"></script>
