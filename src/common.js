@@ -1,3 +1,4 @@
+$(document).ready(function() {
 let timer = setInterval(textAnimation, 100);
 let num = 0;
 let str = 'movie'
@@ -37,3 +38,4 @@ const ham = document.querySelector('.ham-btn');
 ham.addEventListener('click', ()=>{
     document.querySelector('.ham-navigation').classList.toggle('active');
 })
+});
