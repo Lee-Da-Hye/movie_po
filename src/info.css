@@ -37,10 +37,10 @@
 }
 
 .title{
-    font-size: 30px;
+    font-size: 24px;
 }
 .year{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 .genres,.rating,.like-count,.runtime{
@@ -66,12 +66,13 @@
     color: #fff;
     font-size: 18px;
     padding: 20px;
-    width: 250px;
+    width: 20px;
     text-align: center;
     padding: 20px;
 }
 .info-bottom{
-    padding: 50px 300px;
+    width: 500px;
+    padding-top: 50px;
     padding-bottom: 0;
 }
 .desc{
@@ -83,6 +84,8 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding-left: 20px;
+
 }
 .bx-left-arrow-circle:hover{
     color: #ed8989

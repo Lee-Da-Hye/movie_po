@@ -11,7 +11,7 @@ let allMovies = [];
 let currentMovies = [];
 
 const URL = 'https://yts.mx/api/v2/list_movies.json?page=1';
-const url = 'https://yts.mx/api/v2/list_movies.json? page=35';
+const url = 'https://yts.mx/api/v2/list_movies.json? page=15';
 
 
 fetch(URL).then(data => data.json())
