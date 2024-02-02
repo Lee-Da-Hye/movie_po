@@ -17,18 +17,23 @@
 .info-box{
     display: flex;
     justify-content: space-around;
-    padding: 0 20px;
     position: relative;
 }
-/*.movie-img{
-    position: sticky;
-}*/
+.movie-img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .movie-img img{
     width: 50%;
 }
 .info-top{
     padding-top: 30px;
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .title{
