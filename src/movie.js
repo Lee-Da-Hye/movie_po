@@ -10,8 +10,8 @@ inputBox.addEventListener('mouseenter', () => {
 let allMovies = [];
 let currentMovies = [];
 
-const URL = 'https://yts.mx/api/v2/list_movies.json?page=1';
-const url = 'https://yts.mx/api/v2/list_movies.json? page=15';
+const URL = 'https://yts.mx/api/v2/list_movies.json?page=5';
+const url = 'https://yts.mx/api/v2/list_movies.json? page=25';
 
 
 fetch(URL).then(data => data.json())
