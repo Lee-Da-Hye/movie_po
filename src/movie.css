@@ -7,17 +7,13 @@
 .section2 > ul{
 	display: flex;
 	cursor: pointer;
-	list-style: none;
 	width: 100%;
 	max-width: 1200px;
-	margin: 0;
-	padding-left: 0;
-	justify-content: center;
+	padding-left: 92px;
+	justify-content: space-around;
 	align-items: center;
 	vertical-align: middle;
-	background: #fff;
-	text-align: center;
-	gap:0 200px;
+	margin-top: 20px;
 }
 .section2 > input:nth-of-type(1) ~ ul > li:nth-child(1),
 .section2 > input:nth-of-type(2) ~ ul > li:nth-child(2){

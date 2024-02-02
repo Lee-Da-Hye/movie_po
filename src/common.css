@@ -28,7 +28,6 @@ header{
 }
 .navigation{
     display: flex;
-    align-items: center;
 }
 .lnb{
     margin-left: auto;
