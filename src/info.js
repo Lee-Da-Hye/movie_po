@@ -3,10 +3,10 @@ function createDom( movie, newDom){
         <div class="movie-box">
             <div class="inner">
                 <div class="info-box marginAuto">
-                    <div class="movie-img">
-                        <img src="${movie.large_cover_image}" alt="${movie.title}">
-                    </div>
                     <div class="info-top">
+                        <div class="movie-img">
+                            <img src="${movie.large_cover_image}" alt="${movie.title}">
+                        </div>
                         <div class="detail-top">
                             <h2 class="title">${movie.title}</h2>
                             <p class="year">${movie.year}</p>
