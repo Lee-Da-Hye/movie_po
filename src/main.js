@@ -5,8 +5,8 @@ const moviesContents = document.querySelector('.movies-contents');
 let allMovies = [];
 let currentMovies = [];
 
-const URL = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=1';
-const url = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=35';
+const URL = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=5';
+const url = 'https://yts.mx/api/v2/list_movies.json?limit=5&page=25';
 
 
 fetch(URL).then(data => data.json())
