@@ -38,7 +38,7 @@ label.active{
 .input-box{
 	display: flex;
 	align-items: center;
-    position: relative;
+  position: relative;
 }
 .bx-search-alt,.bx-x-circle{
 	font-size: 25px;
