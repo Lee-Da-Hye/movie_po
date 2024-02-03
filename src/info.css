@@ -14,6 +14,17 @@
     background: rgba(46, 67, 181, 0.083);
     border-bottom: 1px solid #e4e9f2;
 }
+.detail-wrap{position: relative;}
+.goPrevPage{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+    position: absolute;
+    top: 11%;
+
+}
+
 .info-box{
     display: flex;
     justify-content: space-around;
@@ -79,13 +90,7 @@
     text-align: justify;
 }
 
-.goPrevPage{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding-left: 20px;
 
-}
 .bx-left-arrow-circle:hover{
     color: #ed8989
 }
