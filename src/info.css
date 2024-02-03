@@ -111,6 +111,11 @@
     }
 }
 @media screen and (max-width: 1025px) {
+    .info-top{
+        flex-direction: column;
+        width: 100%;
+    }
+    .movie-img{height: auto;}
     .movie-img img{
         width: 100%;
     }

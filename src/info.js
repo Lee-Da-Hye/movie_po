@@ -51,6 +51,9 @@ loadMovieDetail();
 
 
 /*이전 페이지*/
-document.querySelector('.goPrevPage').addEventListener('click', ()=>{
-    history.back();
-})
+
+function goBack() {
+    window.history.back();
+  }
+
+  document.querySelector('.goPrevPage').addEventListener('click', goBack);
