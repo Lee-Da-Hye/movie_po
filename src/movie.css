@@ -22,7 +22,7 @@
 .section2 > ul > li > label{
 	display: block;
 	cursor: pointer;
-	font-size: 25px;	
+	font-size: 20px;	
 }
 .section2 > div{
 	display: none;
